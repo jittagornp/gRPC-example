@@ -5,7 +5,7 @@ option java_package = "me.jittagornp.learning.grpc.grpcservice";
 option java_outer_classname = "UploadProto";
 
 //proto package
-package math;
+package http;
 
 // The greeting service definition.
 service UploadService {
