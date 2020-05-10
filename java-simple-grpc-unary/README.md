@@ -1,4 +1,4 @@
-# Java Simple gRPC
+# Java Simple gRPC Unary
 
 > Simple Unary Call
 
@@ -11,10 +11,10 @@ $ mvn clean install
 
 2. Run Server
 ```java
-class GreetingServer {}
+class GrpcServer {}
 ```
 
 3. Run Client 
 ```java
-class GreetingClient {}
+class GrpcClient {}
 ```
