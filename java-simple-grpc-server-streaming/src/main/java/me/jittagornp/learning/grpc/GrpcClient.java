@@ -12,7 +12,7 @@ import me.jittagornp.learning.grpc.grpcservice.HelloResponse;
  *
  * @author jitta
  */
-public class GreetingClient {
+public class GrpcClient {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -22,21 +22,22 @@ public class GreetingClient {
                 .usePlaintext()
                 .build();
 
-        final GreetingServiceGrpc.GreetingServiceStub blockingStub = GreetingServiceGrpc.newStub(channel);
+        System.out.println("Client connect to " + gRPCServerAddress);
+        final GreetingServiceGrpc.GreetingServiceStub serviceStub = GreetingServiceGrpc.newStub(channel);
 
         final HelloRequest request = HelloRequest.newBuilder()
                 .setName("jittagornp")
                 .build();
 
-        blockingStub.hello(request, new StreamObserver<HelloResponse>() {
+        serviceStub.hello(request, new StreamObserver<HelloResponse>() {
             @Override
             public void onNext(final HelloResponse response) {
-                System.out.println("server response => " + response.getMessage());
+                System.out.println("Server Response => " + response.getMessage());
             }
 
             @Override
             public void onError(Throwable e) {
-                e.printStackTrace();
+                e.printStackTrace(System.err);
             }
 
             @Override
@@ -44,8 +45,8 @@ public class GreetingClient {
                 try {
                     System.out.println("Server completed");
                     channel.shutdownNow().awaitTermination(5, TimeUnit.SECONDS);
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace(System.err);
                 }
             }
         });
