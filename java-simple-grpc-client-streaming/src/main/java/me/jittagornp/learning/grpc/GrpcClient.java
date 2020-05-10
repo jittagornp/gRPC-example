@@ -33,7 +33,7 @@ public class GrpcClient {
 
             @Override
             public void onError(Throwable e) {
-                e.printStackTrace();
+                e.printStackTrace(System.err);
             }
 
             @Override
@@ -42,7 +42,7 @@ public class GrpcClient {
                     System.out.println("Client shoutdown channel.");
                     channel.shutdownNow().awaitTermination(5, TimeUnit.SECONDS);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    e.printStackTrace(System.err);
                 }
             }
         });

@@ -24,7 +24,7 @@ public class MathServiceImpl extends MathServiceGrpc.MathServiceImplBase {
 
             @Override
             public void onError(Throwable e) {
-                e.printStackTrace();
+                e.printStackTrace(System.err);
             }
 
             @Override
