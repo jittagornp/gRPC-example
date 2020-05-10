@@ -2,3 +2,8 @@
 /java-simple-grpc/.settings/
 /java-simple-grpc/.classpath
 /java-simple-grpc/.project
+
+/java-simple-grpc-server-streaming/target/
+/java-simple-grpc-server-streaming/.settings/
+/java-simple-grpc-server-streaming/.classpath
+/java-simple-grpc-server-streaming/.project
