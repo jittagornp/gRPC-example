@@ -7,18 +7,14 @@ option java_outer_classname = "UploadProto";
 //proto package
 package http;
 
-// The greeting service definition.
 service UploadService {
-  // Sends a greeting
   rpc upload (stream UploadRequest) returns (stream UploadResponse) {}
 }
 
-// The request message containing the user's name.
 message UploadRequest {
   bytes data = 1;
 }
 
-// The response message containing the greetings
 message UploadResponse {
   int32 progress = 1;
 }
