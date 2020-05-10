@@ -7,18 +7,14 @@ option java_outer_classname = "SumProto";
 //proto package
 package math;
 
-// The greeting service definition.
 service MathService {
-  // Sends a greeting
   rpc sum (stream SumRequest) returns (SumResponse) {}
 }
 
-// The request message containing the user's name.
 message SumRequest {
   int32 number = 1;
 }
 
-// The response message containing the greetings
 message SumResponse {
   int32 result = 1;
 }
