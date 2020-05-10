@@ -1,6 +1,6 @@
 # Java Simple gRPC Client Streaming
 
-> Simple Unary Call
+> Simple Client Streaming Call
 
 ### How to Run
 
