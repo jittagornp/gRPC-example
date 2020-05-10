@@ -6,4 +6,9 @@
 /java-simple-grpc-server-streaming/target/
 /java-simple-grpc-server-streaming/.settings/
 /java-simple-grpc-server-streaming/.classpath
-/java-simple-grpc-server-streaming/.project
+/java-simple-grpc-server-streaming/.
+
+/java-simple-grpc-client-streaming/target/
+/java-simple-grpc-client-streaming/.settings/
+/java-simple-grpc-client-streaming/.classpath
+/java-simple-grpc-client-streaming/.project
