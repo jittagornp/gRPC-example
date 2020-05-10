@@ -1,5 +1,7 @@
 # Java Simple gRPC
 
+> Simple Unary Call
+
 ### How to Run
 
 1. Build 
