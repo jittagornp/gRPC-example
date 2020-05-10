@@ -11,7 +11,7 @@ import me.jittagornp.learning.grpc.grpcservice.HelloResponse;
  *
  * @author jitta
  */
-public class GreetingClient {
+public class GrpcClient {
 
     public static void main(String[] args) throws InterruptedException {
         
@@ -21,15 +21,16 @@ public class GreetingClient {
                 .usePlaintext()
                 .build();
 
-        final GreetingServiceGrpc.GreetingServiceBlockingStub blockingStub = GreetingServiceGrpc.newBlockingStub(channel);
+        System.out.println("Client connect to " + gRPCServerAddress);
+        final GreetingServiceGrpc.GreetingServiceBlockingStub serviceBlockingStub = GreetingServiceGrpc.newBlockingStub(channel);
 
         final HelloRequest request = HelloRequest.newBuilder()
                 .setName("jittagornp")
                 .build();
 
-        final HelloResponse response = blockingStub.hello(request);
+        final HelloResponse response = serviceBlockingStub.hello(request);
 
-        System.out.println("server response => " + response.getMessage());
+        System.out.println("Server Response => " + response.getMessage());
 
         channel.shutdownNow().awaitTermination(5, TimeUnit.SECONDS);
 

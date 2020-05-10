@@ -1,7 +1,7 @@
-/java-simple-grpc/target/
-/java-simple-grpc/.settings/
-/java-simple-grpc/.classpath
-/java-simple-grpc/.project
+/java-simple-grpc-unary/target/
+/java-simple-grpc-unary/.settings/
+/java-simple-grpc-unary/.classpath
+/java-simple-grpc-unary/.project
 
 /java-simple-grpc-server-streaming/target/
 /java-simple-grpc-server-streaming/.settings/
@@ -12,3 +12,10 @@
 /java-simple-grpc-client-streaming/.settings/
 /java-simple-grpc-client-streaming/.classpath
 /java-simple-grpc-client-streaming/.project
+/java-simple-grpc-client-streaming/target/
+
+/java-simple-grpc-bi-directional-streaming/target/
+/java-simple-grpc-bi-directional-streaming/.settings/
+/java-simple-grpc-bi-directional-streaming/.classpath
+/java-simple-grpc-bi-directional-streaming/.project
+/java-simple-grpc-bi-directional-streaming/target/

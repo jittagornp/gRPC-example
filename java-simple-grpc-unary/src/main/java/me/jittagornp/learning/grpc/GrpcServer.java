@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @author jitta
  */
-public class GreetingServer {
+public class GrpcServer {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         
