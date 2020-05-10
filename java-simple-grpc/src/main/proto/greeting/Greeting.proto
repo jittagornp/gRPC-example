@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "me.jittagornp.learning.grpc.grpcservice";
+option java_outer_classname = "GreetingProto";
+
+//proto package
+package greeting;
+
+// The greeting service definition.
+service GreetingService {
+  // Sends a greeting
+  rpc hello (HelloRequest) returns (HelloResponse) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloResponse {
+  string message = 1;
+}
